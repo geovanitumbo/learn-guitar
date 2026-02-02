@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Learn Guitar Easily</title>
+<style>
+
+  body {
+    background-image: url('daftar_gambar/backround\ gitar.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: #f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .overlay {
+    background-color: rgba(0,0,0,0.5);
+    min-height: 100vh;
+    padding: 20px;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  header h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  }
+
+  main {
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    width: 100%;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    border-bottom: 2px solid #a7a5ac;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .chords-list {
+    display: grid;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .chord {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    flex: 1 1 120px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .chord:hover {
+    background: #84827f;
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .chord-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .play-info {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  #progression {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-align: center;
+  }
+
+  button {
+    background-color: #4e89f6;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgb(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #764ba2;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: white;
+  }
+
+  a:hover {
+    color: #ffeb3b
+  }
+
+  .chord a {
+    display:block
+  }
+</style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>Learn the Basic Of Guitar</h1>
+    </header>
+    <main>
+      <section id="intro">
+        <h2>Pengantar</h2>
+        <p>
+          Halo, welcome guys! Buat kalian yang pengin belajar gitar, kalian ada di tempat yang tepat. Gitar itu mudah dipelajari, apalagi kalau dibarengi niat dan konsistensi. Yuk, kita mulai dari akord dan progresi dasar lewat latihan yang simpel dan seru 🎸🔥.
+        </p>
+      </section>
+
+      <section id="basic-chords">
+        <h2>Chord Dasar</h2>
+        <p>Di bawah ini adalah Chord Dasar beserta progresinya masing-masing, klik untuk melihat progresi dari tiap-tiap Chord Dasar.</p>
+        <div class="chords-list">
+          <div class="chord" data-chord="A">
+            <div><a href="chord_pages/chord_a_.html">
+              <div class="chord-name">A</div>
+              <div class="play-info">Klik Untuk Melihat progresi Chord A Major</div>
+            </a></div>
+          </div>
+          <div class="chord" data-chord="B">
+            <div><a href="chord_pages/chord_b_.html">
+              <div class="chord-name">B</div>
+              <div class="play-info">Klik Untuk Melihat progresi Chord B Major</div>
+            </a></div>
+          </div>
+          <div class="chord" data-chord="C">
+            <div><a href="chord_pages/chord_c_.html">
+              <div class="chord-name">C</div>
+              <div class="play-info">Klik Untuk Melihat Progresi Chord C Major</div>
+            </a></div>
+          </div>
+          <div class="chord" data-chord="D">
+            <div><a href="chord_pages/chord_d_.html">
+              <div class="chord-name">D</div>
+              <div class="play-info">Klik Untuk Melihat progresi Chord D Major</div>
+            </a></div>
+          </div>
+          <div class="chord" data-chord="E">
+            <div><a href="chord_pages/chord_e_.html">
+              <div class="chord-name">E</div>
+              <div class="play-info">Klik Untuk Melihat progresi Chord E Major</div>
+            </a></div>
+          </div>
+          <div class="chord" data-chord="F">
+            <div><a href="chord_pages/chord_f_.html">
+             <div class="chord-name">F</div>
+              <div class="play-info">Klik Untuk Melihat progresi Chord F Major</div>
+            </a></div>
+          </div>
+          <div class="chord" data-chord="G">
+            <div><a href="chord_pages/chord_g_.html">
+             <div class="chord-name">G</div>
+              <div class="play-info">Klik Untuk Melihat progresi Chord G Major</div>
+            </a></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="penutup">
+        <!-- <h2>Disclaimer</h2> -->
+        <P style="font-weight: bold; font-size: 1.3rem;">DISCLAIMER</P>
+        <p>Website ini dibuat hanya untuk berbagi sedikit pengetahuan yang saya miliki tentang bermain gitar. Jika masih terdapat kekeliruan atau kesalahan, saya mohon maaf dan harap dimaklumi karena kemampuan saya masih terbatas. Semoga website ini dapat membantu dan memudahkan teman-teman dalam belajar bermain gitar. </p>
+        <!-- <div id="progression">G &rarr; C &rarr; D &rarr; G</div>
+        <button id="playProgressionBtn">Play Progression</button> -->
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2026 Learn Guitar Easily - Enjoy your music journey!
+    </footer>
+  </div>
+</body>
+</html>
+

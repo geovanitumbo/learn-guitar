@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Family Chord C</title>
+    <style>
+      
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #191970, #d2b48c);
+    color: #f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .overlay {
+    background-color: rgba(0,0,0,0.5);
+    /* min-height: 100vh; */
+    padding: 20px;
+    color:white;
+    display:grid;
+    /* flex-direction: column; */
+    align-items: center;
+  }
+  
+  .judul{
+    font-size: 45px;
+  }
+  
+  header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  }
+  
+  main {
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    width: 100%;
+  }
+  
+  .chord-preview {
+  margin-top: 20px;
+  text-align: center;
+}
+  
+  #chord-image {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  display: none;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    border-bottom: 2px solid #9f7aea;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .chords-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .chord {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    flex: 0 0 calc(33.333% - 2rem);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+  }
+
+  .chord:hover {
+    background: #84827f;
+    color: #fff;
+    box-shadow:  0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .chord-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .play-info {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  #progression {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-align: center;
+  }
+
+  button {
+    background-color: #9f7aea;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(159, 122, 234, 0.7);
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #764ba2;
+  }
+
+
+
+  @media (max-width: 600px) {
+    .chord {
+      flex: 0 0 100%
+    }
+  }
+
+  /* =========================
+   TABLET (max-width: 1024px)
+   ========================= */
+@media (max-width: 1024px) {
+  main {
+    max-width: 95%;
+    padding: 1.5rem;
+  }
+
+  .chord {
+    flex: 0 0 calc(50% - 1.5rem);
+  }
+
+  .judul {
+    font-size: 38px;
+  }
+}
+
+/* =========================
+   HP (max-width: 600px)
+   ========================= */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  .judul {
+    font-size: 30px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 1.2rem;
+  }
+
+  .chords-list {
+    gap: 1rem;
+  }
+
+  .chord {
+    flex: 0 0 100%;
+    padding: 0.8rem 1rem;
+  }
+
+  .chord-name {
+    font-size: 1.3rem;
+  }
+
+  .play-info {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+  }
+
+  #chord-image {
+    width: 90%;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>
+        <div class="judul">Nada Dasar B</div>
+      </h1>
+    </header>
+    <main>
+      <section id="intro">
+        <h2>Penjelasan Singkat</h2>
+        <p>
+          Family chord B berpusat pada nada dasar B mayor dengan karakter modern dan kuat. Chord-chord di dalamnya sering digunakan pada lagu pop, jazz, dan musik modern. Suaranya terdengar tegas dan berani. Family chord ini biasanya dipakai untuk memberi warna musik yang lebih variatif.
+        </p>
+      </section>
+
+      <section id="basic-chords">
+        <h2>Family Chord</h2>
+        <p>Klik nama chord untuk melihat bentuk chord:</p>
+        <div class="chords-list">
+          <div class="chord" data-chord="B">
+            <div class="chord-name">B</div>
+            <div class="play-info">(I)</div>
+          </div>
+          <div class="chord" data-chord="C_m">
+            <div class="chord-name">C#m</div>
+            <div class="play-info">(II)</div>
+          </div>
+          <div class="chord" data-chord="D_M">
+            <div class="chord-name">D#m</div>
+            <div class="play-info">(III)</div>
+          </div>
+          <div class="chord" data-chord="E">
+            <div class="chord-name">E</div>
+            <div class="play-info">(IV)</div>
+          </div>
+          <div class="chord" data-chord="F_">
+            <div class="chord-name">F#</div>
+            <div class="play-info">(V)</div>
+          </div>
+          <div class="chord" data-chord="G_m">
+            <div class="chord-name">G#m</div>
+            <div class="play-info">(VI)</div>
+          </div>
+          <div class="chord" data-chord="a_dim">
+            <div class="chord-name">A#dim</div>
+            <div class="play-info">(VII)</div>
+          </div>
+          </div>
+        </div>
+
+        <div class="chord-preview">
+          <img id="chord-image" alt="Chord Preview">
+        </div>
+          
+      </section>
+
+      <section id="forward">
+        <a href="../index.html">
+          <button id="back-button">Go to Home</button>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2026 Learn Guitar Easily - Enjoy your music journey!
+    </footer>
+
+
+   <script>
+  const chords = document.querySelectorAll(".chord");
+  const chordImage = document.getElementById("chord-image");
+
+  chords.forEach(chord => {
+    chord.addEventListener("click", () => {
+
+      // ambil nama chord dari data-chord
+      const chordName = chord.dataset.chord;
+
+      // ganti gambar sesuai chord
+      chordImage.src = `daftar_gambar/nada_dasar_b/chord ${chordName}.png`;
+      chordImage.style.display = "block";
+
+      // efek aktif
+      chords.forEach(c => c.classList.remove("active"));
+      chord.classList.add("active");
+    });
+  });
+</script>
+
+  </div>
+</body>
+</html>
+
